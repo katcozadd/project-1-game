@@ -1,0 +1,10 @@
+html, body {
+	background: pink;
+	overflow: hidden;
+	height: 100%;
+	margin: 0;
+}
+
+canvas#gameCanvas {
+	border: 1px solid black;
+}
