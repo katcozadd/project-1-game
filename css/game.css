@@ -8,3 +8,25 @@ html, body {
 canvas#gameCanvas {
 	border: 1px solid black;
 }
+
+ h1#splashTitle{
+    font-size: 80px;
+    font-family: 'Nothing You Could Do', cursive;
+    color: #ffea4c;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    animation-name: splashTitle;
+    animation-duration: 4s;    
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes splashTitle {
+    from {top: 0px;}
+    to {top: 250px; color: #89b75d;}
+}
+
+.homepage-button {
+	height: 30px;
+}
