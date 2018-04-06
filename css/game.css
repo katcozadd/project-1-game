@@ -67,10 +67,11 @@ div.game {
 }
 
 #vickie {
-    height: 100px;
-    width: 100px;
-    background-color: black;
-    position: relative;
+    height: 200px;
+    width: auto;
+    position: absolute;
+    top: 400px;
+    left: 400px;
 }
 
 /*<--- !Splash page ---> */
