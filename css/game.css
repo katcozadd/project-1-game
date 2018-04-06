@@ -74,6 +74,13 @@ div.game {
     left: 400px;
 }
 
+#avocado {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+}
+
 /*<--- !Splash page ---> */
  h1#splashTitle{
     font-size: 120px;
