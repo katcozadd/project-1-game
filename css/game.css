@@ -52,8 +52,8 @@ p {
 	line-height: 25px;
 }
 /*<--- !game section ---> */
-canvas#gameCanvas {
-	border: 1px solid black;
+div.game {
+	border: 5px solid #ffffff;
 	background: url("../images/field2.jpg") no-repeat;
     background-size: cover;
 	position: absolute;
@@ -62,9 +62,16 @@ canvas#gameCanvas {
 	right: 0;
 	bottom: 0;
 	left: 0;
+    height: 600px;
+    width: 1000px;
 }
 
-
+#vickie {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    position: relative;
+}
 
 /*<--- !Splash page ---> */
  h1#splashTitle{
