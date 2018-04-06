@@ -1,8 +1,54 @@
 html, body {
-	background: pink;
+	background: url("../images/veggie.jpg") center center no-repeat;
+	background-size: cover;
 	overflow: hidden;
 	height: 100%;
 	margin: 0;
+	text-align: center;
+}
+
+section.instruction-wrapper {
+	background-color: rgba(255, 255, 255, 0.6);
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 1000px;
+	height: 600px;
+	vertical-align: middle;
+	border: 5px solid #ffffff;
+}
+
+h1, h3, h5, p {
+	font-family: 'Nothing You Could Do', cursive;
+}
+
+h1 {
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: black;
+    font-size: 70px;
+    margin: 30px 0 5px 0;
+    letter-spacing: 10px;
+}
+
+h3 {
+    color: #000000;
+    font-size: 40px;
+    margin: 0 20px;
+    letter-spacing: 2px;
+}
+
+h5 {
+    font-size: 30px;
+    margin: 5px;
+}
+
+p {
+	margin: 5px 180px;
+	line-height: 25px;
 }
 
 canvas#gameCanvas {
@@ -10,23 +56,49 @@ canvas#gameCanvas {
 }
 
  h1#splashTitle{
-    font-size: 80px;
+    font-size: 100px;
     font-family: 'Nothing You Could Do', cursive;
-    color: #ffea4c;
+    letter-spacing: 10px;
     margin: 0;
+    -webkit-text-fill-color: white;
+  	-webkit-text-stroke-width: .1px;
+  	-webkit-text-stroke-color: black;
     position: relative;
     text-align: center;
     animation-name: splashTitle;
-    animation-duration: 4s;    
+    animation-duration: 3s;    
     animation-fill-mode: forwards;
 }
 
 
 @keyframes splashTitle {
     from {top: 0px;}
-    to {top: 250px; color: #89b75d;}
-}
+    to {top: 250px; 
+    	color: #ffffff; 
+    	background-color:  
+    	-webkit-text-fill-color: #ffffff;
+  		-webkit-text-stroke-width: .1px;
+  		-webkit-text-stroke-color: black;
+		} 
+	}
+
 
 .homepage-button {
-	height: 30px;
+    height: 70px;
+    width: 170px;
+    font-size: 22px;
+    font-family: 'Nothing You Could Do', cursive;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    position: relative;
+    display: block;
+    top: 300px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.homepageLink {
+	text-decoration: none;
+	color: #000000;
 }
