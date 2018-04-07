@@ -33,8 +33,8 @@ $(document).ready(function() {
 	function spawnMeat () {
 		let meat = $('#meat'); //creating an meat variable for the meat image
 		TweenMax.fromTo(meat, 5, //animating the meat for 5 seconds			
-			{css: {top: '-10px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '550px'}, //stop point for the animation 550px from the top of container		
+			{css: {left: '100px', top: '-10px'}}, //starting animation at -10px from the top of container		
+			{css: {left: '100px', top: '550px'}, //stop point for the animation 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			{ meat.remove() }, //removing the meat after animation to avoid storage issues
 		}); 
