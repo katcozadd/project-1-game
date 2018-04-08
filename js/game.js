@@ -1,20 +1,27 @@
 $(document).ready(function() {
 	console.log('sanity check');
 
-
-let avocado = $('#avocado'); //creating an avocado variable for the avocado image
-let broccoli = $('#broccoli'); //creating an broccoli variable for the broccoli image
-let carrot = $('#carrot'); //creating an carrot variable for the carrot image
-let meat = $('#meat'); //creating an meat variable for the meat image
+	let asparagus = $('#asparagus');
+	let avocado = $('#avocado'); //creating an avocado variable for the avocado image
+	let broccoli = $('#broccoli'); //creating an broccoli variable for the broccoli image
+	let carrot = $('#carrot'); //creating an carrot variable for the carrot image
+	let cucumber = $('#cucumber');
+	let eggplant = $('#eggplant');
+	let pepper = $('#pepper');
+	let squash = $('squash');
+	let chicken = $('#chicken');
+	let groundmeat = $('#groundmeat');
+	let pork = $('#pork');
+	let meat = $('#meat'); //creating an meat variable for the meat image
 
 	function vickieGo () {
 	$(document).keydown(function(event) {
 
 	let vickieStart = 0; //creating a start point for vickie to start moving
         if(event.keyCode == "37") //Moving with the right arrow key
-            $("#vickie").stop(true).animate({"left" : "-=50px"}); //moving vickie right 50px
+            $("#vickie").stop(true).animate({"left" : "-=70px"}); //moving vickie right 50px
         if(event.keyCode == "39")   //moving with the left arrow key   
-            $("#vickie").stop(true).animate({"left" : "+=50px"}); //moving vickie left 50px
+            $("#vickie").stop(true).animate({"left" : "+=70px"}); //moving vickie left 50px
 		}
 		);
 	}
@@ -23,56 +30,37 @@ let meat = $('#meat'); //creating an meat variable for the meat image
 
 
 	function spawnAvocado() {
-		TweenMax.fromTo(avocado, 5, //animating the avocado for 8 seconds			
-			{css: {top: '-10px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '550px'}, //stop point for the animation 550px from the top of container		
+		TweenMax.fromTo(avocado, 4, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			{avocado.remove()}, //removing the avocado after animation to avoid storage issues 
 			onUpdate:update }); 
 			function complete() {	
 			}
 			function update() {
-                }
+            }
 	}
 
-	// spawnAvocado(); //calling the spawnAvocado function
-
-
-
-	function spawnMeat () {
-		TweenMax.fromTo(meat, 5, //animating the meat for 5 seconds			
-			{css: {left: '100px', top: '-10px'}}, //starting animation at 100px from the left and -10px from the top of container		
-			{css: {left: '100px', top: '550px'}, //stop point for the animation  100px from left and 550px from the top of container		
-			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
-			{ meat.remove() }, //removing the meat after animation to avoid storage issues
-			onUpdate:update }); 
-			function complete() {	
-			}
-			function update() {
-                }
-	}
-
-	// spawnMeat(); //calling the spawnMeat function
-
+	
 		function spawnBroccoli () {
 		TweenMax.fromTo(broccoli, 5, //animating the brocolli for 10 seconds			
-			{css: {left: '400px', top: '-10px'}}, //starting animation at 400px from the left and -10px from the top of container		
-			{css: {left: '400px', top: '550px'}, //stop point for the animation  400px from left and 550px from the top of container		
+			{css: {left: '400px', top: '-100px'}}, //starting animation at 400px from the left and -10px from the top of container		
+			{css: {left: '400px', top: '800px'}, //stop point for the animation  400px from left and 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			{ broccoli.remove() }, //removing the broccoli after animation to avoid storage issues
 			onUpdate:update }); 
 			function complete() {	
 			}
 			function update() {
-                }
+            }
 	}
 
-	// spawnBroccoli(); //calling the spawnBrocolli function
 
 		function spawnCarrot () {
-		TweenMax.fromTo(carrot, 5, //animating the carrot for 4 seconds			
-			{css: {left: '800px', top: '-10px'}}, //starting animation at 800px from the left and -10px from the top of container		
-			{css: {left: '800px', top: '500px'}, //stop point for the animation 800px from left and 550px from the top of container		
+		TweenMax.fromTo(carrot, 8, //animating the carrot for 4 seconds			
+			{css: {left: '800px', top: '-100px'}}, //starting animation at 800px from the left and -10px from the top of container		
+			{css: {left: '800px', top: '800px'}, //stop point for the animation 800px from left and 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			{ carrot.remove() }, //removing the carrot after animation to avoid storage issues
 			onUpdate:update
@@ -83,8 +71,123 @@ let meat = $('#meat'); //creating an meat variable for the meat image
             }
 	}
 
-	// spawnCarrot(); //calling the spawnBrocolli function
+	function spawnCucumber() {
+		TweenMax.fromTo(cucumber, 6, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{cucumber.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
 
+		function spawnAsparagus() {
+		TweenMax.fromTo(asparagus, 10, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{asparagus.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
+
+
+		function spawnPepper() {
+		TweenMax.fromTo(pepper, 3, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{pepper.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
+
+		function spawnEggplant() {
+		TweenMax.fromTo(eggplant, 5, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{eggplant.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
+
+		function spawnSquash() {
+		TweenMax.fromTo(squash, 4, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{squash.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
+
+		function spawnChicken() {
+		TweenMax.fromTo(chicken, 5, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{chicken.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
+
+		function spawnGroundMeat() {
+		TweenMax.fromTo(groundmeat, 3, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{groundmeat.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
+
+		function spawnPork() {
+		TweenMax.fromTo(pork, 6, //animating the avocado for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{pork.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
+
+		function spawnMeat () {
+		TweenMax.fromTo(meat, 2, //animating the meat for 5 seconds			
+			{css: {left: '100px', top: '-100px'}}, //starting animation at 100px from the left and -10px from the top of container		
+			{css: {left: '100px', top: '800px'}, //stop point for the animation  100px from left and 550px from the top of container		
+			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			{ meat.remove() }, //removing the meat after animation to avoid storage issues
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+            }
+	}
 
 
     let dropFood = setInterval(function(){
@@ -94,7 +197,7 @@ let meat = $('#meat'); //creating an meat variable for the meat image
             	spawnAvocado();
                 break;
             case 2: 
-            	spawnMeat();
+            	spawnAsparagus();
                 break;
             case 3: 
             	spawnBroccoli();
@@ -102,15 +205,38 @@ let meat = $('#meat'); //creating an meat variable for the meat image
             case 4: 
             	spawnCarrot();
             	break;
+            case 5: 
+            	spawnCucumber();
+            	break;
+            case 6:
+            	spawnEggplant();
+            	break;
+            case 7:
+            	spawnPepper();
+            	break;
+            case 8:
+            	spawnSquash();
+            	break;
+            case 9: 
+            	spawnChicken();
+            	break;
+            case 10:
+            	spawnGroundMeat();
+            	break;
+            case 11:
+            	spawnPork();
+            	break;
+            case 12:
+            	spawnMeat();
             default: 
                 break;
         }
-    }, 800)
+    }, 700)
 
 
 
     function getRandom() { //get a random number to cycle through the arrows to randomize the drop.
-        let number = Math.floor(Math.random() * ((6-1)+1) + 1);
+        let number = (Math.floor(Math.random() * 12) + 1);
         return number;
     }
 

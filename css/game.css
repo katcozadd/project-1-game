@@ -70,7 +70,7 @@ div.game {
     width: 300px;
     position: absolute;
     bottom: 0px;
-    left: 400px;
+    left: 500px;
 }
 
 #avocado {
@@ -120,8 +120,48 @@ div.game {
     width: auto;
     position: absolute;
     top: -200px;
+    left: 200px;
 }
 
+#pepper {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+    left: 700px;
+}
+
+#squash {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+    left: 600px;
+}
+
+#chicken {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+    left: 500px;
+}
+
+#groundmeat {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+    left: 300px;
+}
+
+#pork {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+    left: 800px;
+}
 
 
 /*<--- !Splash page ---> */
