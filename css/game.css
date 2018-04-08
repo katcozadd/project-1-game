@@ -53,7 +53,7 @@ p {
 }
 /*<--- !game section ---> */
 div.game {
-	background: url("../images/city2.jpg") no-repeat center center;
+	background: url("../images/field2.jpg") no-repeat center center;
     background-size: cover;
     overflow: hidden;
 	position: absolute;
@@ -66,10 +66,10 @@ div.game {
 }
 
 #vickie {
-    height: 200px;
-    width: auto;
+    height: 300px;
+    width: 300px;
     position: absolute;
-    top: 400px;
+    bottom: 0px;
     left: 400px;
 }
 

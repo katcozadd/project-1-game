@@ -2,6 +2,11 @@ $(document).ready(function() {
 	console.log('sanity check');
 
 
+let avocado = $('#avocado'); //creating an avocado variable for the avocado image
+let broccoli = $('#broccoli'); //creating an broccoli variable for the broccoli image
+let carrot = $('#carrot'); //creating an carrot variable for the carrot image
+let meat = $('#meat'); //creating an meat variable for the meat image
+
 	function vickieGo () {
 	$(document).keydown(function(event) {
 
@@ -18,7 +23,6 @@ $(document).ready(function() {
 
 
 	function spawnAvocado() {
-		let avocado = $('#avocado'); //creating an avocado variable for the avocado image
 		TweenMax.fromTo(avocado, 5, //animating the avocado for 8 seconds			
 			{css: {top: '-10px'}}, //starting animation at -10px from the top of container		
 			{css: {top: '550px'}, //stop point for the animation 550px from the top of container		
@@ -36,7 +40,6 @@ $(document).ready(function() {
 
 
 	function spawnMeat () {
-		let meat = $('#meat'); //creating an meat variable for the meat image
 		TweenMax.fromTo(meat, 5, //animating the meat for 5 seconds			
 			{css: {left: '100px', top: '-10px'}}, //starting animation at 100px from the left and -10px from the top of container		
 			{css: {left: '100px', top: '550px'}, //stop point for the animation  100px from left and 550px from the top of container		
@@ -52,7 +55,6 @@ $(document).ready(function() {
 	// spawnMeat(); //calling the spawnMeat function
 
 		function spawnBroccoli () {
-		let broccoli = $('#broccoli'); //creating an broccoli variable for the broccoli image
 		TweenMax.fromTo(broccoli, 5, //animating the brocolli for 10 seconds			
 			{css: {left: '400px', top: '-10px'}}, //starting animation at 400px from the left and -10px from the top of container		
 			{css: {left: '400px', top: '550px'}, //stop point for the animation  400px from left and 550px from the top of container		
@@ -68,7 +70,6 @@ $(document).ready(function() {
 	// spawnBroccoli(); //calling the spawnBrocolli function
 
 		function spawnCarrot () {
-		let carrot = $('#carrot'); //creating an carrot variable for the carrot image
 		TweenMax.fromTo(carrot, 5, //animating the carrot for 4 seconds			
 			{css: {left: '800px', top: '-10px'}}, //starting animation at 800px from the left and -10px from the top of container		
 			{css: {left: '800px', top: '500px'}, //stop point for the animation 800px from left and 550px from the top of container		
