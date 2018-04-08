@@ -53,17 +53,16 @@ p {
 }
 /*<--- !game section ---> */
 div.game {
-	border: 5px solid #ffffff;
-	background: url("../images/field2.jpg") no-repeat;
+	background: url("../images/city2.jpg") no-repeat center center;
     background-size: cover;
+    overflow: hidden;
 	position: absolute;
 	margin: auto;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
-    height: 600px;
-    width: 1000px;
+    width: auto;
 }
 
 #vickie {

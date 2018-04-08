@@ -19,15 +19,20 @@ $(document).ready(function() {
 
 	function spawnAvocado() {
 		let avocado = $('#avocado'); //creating an avocado variable for the avocado image
-		TweenMax.fromTo(avocado, 8, //animating the avocado for 8 seconds			
+		TweenMax.fromTo(avocado, 5, //animating the avocado for 8 seconds			
 			{css: {top: '-10px'}}, //starting animation at -10px from the top of container		
 			{css: {top: '550px'}, //stop point for the animation 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
-			{ avocado.remove() }, //removing the avocado after animation to avoid storage issues
-		}); 	
+			{avocado.remove()}, //removing the avocado after animation to avoid storage issues 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+                }
 	}
 
-	spawnAvocado(); //calling the spawnAvocado function
+	// spawnAvocado(); //calling the spawnAvocado function
+
 
 
 	function spawnMeat () {
@@ -37,26 +42,34 @@ $(document).ready(function() {
 			{css: {left: '100px', top: '550px'}, //stop point for the animation  100px from left and 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			{ meat.remove() }, //removing the meat after animation to avoid storage issues
-		}); 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+                }
 	}
 
-	spawnMeat(); //calling the spawnMeat function
+	// spawnMeat(); //calling the spawnMeat function
 
 		function spawnBroccoli () {
 		let broccoli = $('#broccoli'); //creating an broccoli variable for the broccoli image
-		TweenMax.fromTo(broccoli, 10, //animating the brocolli for 10 seconds			
+		TweenMax.fromTo(broccoli, 5, //animating the brocolli for 10 seconds			
 			{css: {left: '400px', top: '-10px'}}, //starting animation at 400px from the left and -10px from the top of container		
 			{css: {left: '400px', top: '550px'}, //stop point for the animation  400px from left and 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			{ broccoli.remove() }, //removing the broccoli after animation to avoid storage issues
-		}); 
+			onUpdate:update }); 
+			function complete() {	
+			}
+			function update() {
+                }
 	}
 
-	spawnBroccoli(); //calling the spawnBrocolli function
+	// spawnBroccoli(); //calling the spawnBrocolli function
 
 		function spawnCarrot () {
 		let carrot = $('#carrot'); //creating an carrot variable for the carrot image
-		TweenMax.fromTo(carrot, 4, //animating the carrot for 4 seconds			
+		TweenMax.fromTo(carrot, 5, //animating the carrot for 4 seconds			
 			{css: {left: '800px', top: '-10px'}}, //starting animation at 800px from the left and -10px from the top of container		
 			{css: {left: '800px', top: '500px'}, //stop point for the animation 800px from left and 550px from the top of container		
 			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
@@ -69,13 +82,13 @@ $(document).ready(function() {
             }
 	}
 
-	spawnCarrot(); //calling the spawnBrocolli function
+	// spawnCarrot(); //calling the spawnBrocolli function
 
 
 
-    var dropFood = setInterval(function(){
-        var random = getRandom()
-        switch(random){ 
+    let dropFood = setInterval(function(){
+        let random = getRandom();
+        switch(random) { 
             case 1: 
             	spawnAvocado();
                 break;
@@ -83,7 +96,7 @@ $(document).ready(function() {
             	spawnMeat();
                 break;
             case 3: 
-            	spawnBroccolli();
+            	spawnBroccoli();
                 break;
             case 4: 
             	spawnCarrot();
@@ -91,11 +104,12 @@ $(document).ready(function() {
             default: 
                 break;
         }
-    }, 1000)
+    }, 800)
+
 
 
     function getRandom() { //get a random number to cycle through the arrows to randomize the drop.
-        var number = (Math.floor(Math.random() * 4) + 1);
+        let number = Math.floor(Math.random() * ((6-1)+1) + 1);
         return number;
     }
 
