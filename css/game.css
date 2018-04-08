@@ -88,6 +88,43 @@ div.game {
     top: -200px;
 }
 
+#broccoli {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+}
+
+#cucumber {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+}
+
+#asparagus {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+}
+
+#carrot {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+}
+
+#eggplant {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+}
+
+
+
 /*<--- !Splash page ---> */
  h1#splashTitle{
     font-size: 120px;
