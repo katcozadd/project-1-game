@@ -3,6 +3,8 @@ $(document).ready(function() {
 
 	let asparagus = $('#asparagus'); //creating an asparagus variable for the asparagus image
 	let avocado = $('#avocado'); //creating an avocado variable for the avocado image
+	let rect2 = vickie.getBoundingClientRect();
+	console.log(rect2);
 	let broccoli = $('#broccoli'); //creating a broccoli variable for the broccoli image
 	let carrot = $('#carrot'); //creating a carrot variable for the carrot image
 	let cucumber = $('#cucumber'); //creating a cucumber variable for the cucumber image
@@ -13,7 +15,6 @@ $(document).ready(function() {
 	let groundmeat = $('#groundmeat'); //creating a groundmeat variable for the groundmeat image
 	let pork = $('#pork'); //creating a pork variable for the pork image
 	let meat = $('#meat'); //creating a meat variable for the meat image
-
 
 
 
@@ -91,13 +92,13 @@ $(document).ready(function() {
 		TweenMax.fromTo(asparagus, 10, //animating the avocado for 8 seconds			
 			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
 			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
-			onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
-			{asparagus.remove()}, //removing the avocado after animation to avoid storage issues 
-			onUpdate:update }); 
-			function complete() {	
-			}
-			function update() {
-            }
+			// onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
+			// {asparagus.remove()}, //removing the avocado after animation to avoid storage issues 
+			// onUpdate:update }); 
+			// function complete() {	
+			// }
+			// function update() {
+            })
 	}
 
 
@@ -228,20 +229,21 @@ $(document).ready(function() {
 
 
     function getRandom() { //get a random number to cycle through the arrows to randomize the drop.
-        let number = (Math.floor(Math.random() * 6-1) + 1);
+        let number = (Math.floor(Math.random() * 6) + 1);
         return number;
     }
 
 
-    //creating functionality to detect collisions
   function detectCollision() {
-    vickie = {x: 500, y: 403, width: 300, height: 300}
-    avocado = {x: 500, y: 600, width: 50, height: 50}
+    let vickie = $('.mainChar');
+    vickie = {x: 500, y: 800, width: 300, height: 300};
+   	let avo  = $('.fallingVeg');
+    avo = {x: 500, y: 800, width: 50, height: 50};
 
-    if (vickie.x < avocado.x + avocado.width &&
-   			vickie.x + vickie.width > avocado.x &&
-   			vickie.y < avocado.y + avocado.height &&
-   			vickie.height + vickie.y > avocado.y) {
+    if (vickie.x < avo.x + avo.width &&
+   			vickie.x + vickie.width > avo.x &&
+   			vickie.y < avo.y + avo.height &&
+   			vickie.height + vickie.y > avo.y) {
     		alert('collision detected!');
     	}	
 	}
