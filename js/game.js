@@ -232,6 +232,26 @@ $(document).ready(function() {
         return number;
     }
     
+            
+// check for collision   
+
+ function collision(avocado, vickie) {
+        var x1 = avocado.offset().left;
+        var y1 = avocado.offset().top;
+        var h1 = avocado.outerHeight(true);
+        var w1 = avocado.outerWidth(true);
+        var b1 = y1 + h1;
+        var r1 = x1 + w1;
+        var x2 = vickie.offset().left;
+        var y2 = vickie.offset().top;
+        var h2 = vickie.outerHeight(true);
+        var w2 = vickie.outerWidth(true);
+        var b2 = y2 + h2;
+        var r2 = x2 + w2;
+
+        if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
+        return true;
+      }
 
 
 
