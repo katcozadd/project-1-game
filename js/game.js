@@ -3,8 +3,6 @@ $(document).ready(function() {
 
 	let asparagus = $('#asparagus'); //creating an asparagus variable for the asparagus image
 	let avocado = $('#avocado'); //creating an avocado variable for the avocado image
-	let rect2 = vickie.getBoundingClientRect();
-	console.log(rect2);
 	let broccoli = $('#broccoli'); //creating a broccoli variable for the broccoli image
 	let carrot = $('#carrot'); //creating a carrot variable for the carrot image
 	let cucumber = $('#cucumber'); //creating a cucumber variable for the cucumber image
@@ -15,7 +13,7 @@ $(document).ready(function() {
 	let groundmeat = $('#groundmeat'); //creating a groundmeat variable for the groundmeat image
 	let pork = $('#pork'); //creating a pork variable for the pork image
 	let meat = $('#meat'); //creating a meat variable for the meat image
-
+	let vickie = $('#vickie');
 
 
 	//creating functionality for character movement
@@ -24,10 +22,11 @@ $(document).ready(function() {
 
 	let vickieStart = 0; //creating a start point for vickie to start moving
         if(event.keyCode == "37") //Moving with the right arrow key
-            $("#vickie").stop(true).animate({"left" : "-=70px"}); //moving vickie right 50px
+            $("#vickie").stop(true).animate({"left" : "-=70px"}, "fast"); //moving vickie right 50px
         if(event.keyCode == "39")   //moving with the left arrow key   
-            $("#vickie").stop(true).animate({"left" : "+=70px"}); //moving vickie left 50px
+            $("#vickie").stop(true).animate({"left" : "+=70px"}, "fast"); //moving vickie left 50px
 		}
+
 		);
 	}
 
@@ -37,14 +36,15 @@ $(document).ready(function() {
 	function spawnAvocado() {
 		TweenMax.fromTo(avocado, 10, //animating the avocado for 8 seconds			
 			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'}, //stop point for the animation 550px from the top of container		
+			{css: {top: '800px'},}) //stop point for the animation 550px from the top of container		
 	// 		onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 	// 		{avocado.remove()}, //removing the avocado after animation to avoid storage issues 
 	// 		onUpdate:update }); 
 	// 		function complete() {	
 	// 		}
 	// 		function update() {
-            })
+
+            
 	}
 
 	
@@ -193,63 +193,47 @@ $(document).ready(function() {
             })
 	}
 
-	//creating functionality that will trigger animation of images based off of a random number between 1-12
+	//creating functionality that will trigger animation of images based off of a random number between 1-6
 	//setting an interval of 1 millisecond between each random number
-    let dropFood = setInterval(function(){
+    const dropFood = setInterval(function(){
         let random = getRandom();
         switch(random) { 
-            case 1: 
+            case 1: //if random number is 1 call these functions
             	spawnAvocado();
             	spawnChicken();
                 break;
-            case 2: 
+            case 2: //if random number is 2 call these functions
             	spawnAsparagus();
             	spawnGroundMeat();
                 break;
-            case 3: 
+            case 3: //if random number is 3 call these functions
             	spawnBroccoli();
             	spawnPork();
                 break;
-            case 4: 
+            case 4: //if random number is 4 call these functions
             	spawnCarrot();
             	spawnMeat();
             	break;
-            case 5: 
+            case 5: //if random number is 5 call these functions
             	spawnCucumber();
             	spawnSquash();
             	break;
-            case 6:
+            case 6: //if random number is 6 call these functions
             	spawnEggplant();
             	spawnPepper();
             	break;
             default: 
                 break;
         }
-    }, 2000)
-
+    }, 2000) //interval timing
 
     function getRandom() { //get a random number to cycle through the arrows to randomize the drop.
         let number = (Math.floor(Math.random() * 6) + 1);
         return number;
     }
+    
 
 
-  function detectCollision() {
-    let vickie = $('.mainChar');
-    vickie = {x: 500, y: 800, width: 300, height: 300};
-   	let avo  = $('.fallingVeg');
-    avo = {x: 500, y: 800, width: 50, height: 50};
 
-    if (vickie.x < avo.x + avo.width &&
-   			vickie.x + vickie.width > avo.x &&
-   			vickie.y < avo.y + avo.height &&
-   			vickie.height + vickie.y > avo.y) {
-    		alert('collision detected!');
-    	}	
-	}
 });
-
-
-
-
 
