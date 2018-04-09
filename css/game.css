@@ -99,13 +99,15 @@ div.game {
     width: auto;
     position: absolute;
     top: -200px;
+    left: 900px;
 }
 
 #asparagus {
-    height: 50px;
+    height: 100px;
     width: auto;
     position: absolute;
     top: -200px;
+    left: 1000px;
 }
 
 #carrot {
@@ -116,7 +118,7 @@ div.game {
 }
 
 #eggplant {
-    height: 50px;
+    height: 100px;
     width: auto;
     position: absolute;
     top: -200px;
@@ -136,7 +138,7 @@ div.game {
     width: auto;
     position: absolute;
     top: -200px;
-    left: 600px;
+    left: 1000px;
 }
 
 #chicken {
