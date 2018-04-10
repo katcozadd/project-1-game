@@ -67,10 +67,10 @@ div.game {
 
 #vickie {
     height: 300px;
-    width: 300px;
+    width: auto;
     position: absolute;
     bottom: 0px;
-    left: 500px;
+    padding: 0;
 }
 
 #avocado {
@@ -78,13 +78,7 @@ div.game {
     width: auto;
     position: absolute;
     top: -200px;
-}
-
-#meat {
-    height: 50px;
-    width: auto;
-    position: absolute;
-    top: -200px;
+    left: 500;
 }
 
 #broccoli {
@@ -92,6 +86,7 @@ div.game {
     width: auto;
     position: absolute;
     top: -200px;
+    left: 400;
 }
 
 #cucumber {
@@ -115,6 +110,7 @@ div.game {
     width: auto;
     position: absolute;
     top: -200px;
+    left: 800px;
 }
 
 #eggplant {
@@ -138,7 +134,7 @@ div.game {
     width: auto;
     position: absolute;
     top: -200px;
-    left: 1000px;
+    left: 1100px;
 }
 
 #chicken {
@@ -163,6 +159,14 @@ div.game {
     position: absolute;
     top: -200px;
     left: 800px;
+}
+
+#meat {
+    height: 50px;
+    width: auto;
+    position: absolute;
+    top: -200px;
+    left: 100;
 }
 
 

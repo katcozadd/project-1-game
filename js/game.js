@@ -19,53 +19,57 @@ $(document).ready(function() {
 	//creating functionality for character movement
 	function vickieGo () {
 	$(document).keydown(function(event) {
-
+			// console.log($('#vickie').position());
 	let vickieStart = 0; //creating a start point for vickie to start moving
         if(event.keyCode == "37") //Moving with the right arrow key
             $("#vickie").stop(true).animate({"left" : "-=70px"}, "fast"); //moving vickie right 50px
         if(event.keyCode == "39")   //moving with the left arrow key   
             $("#vickie").stop(true).animate({"left" : "+=70px"}, "fast"); //moving vickie left 50px
-		}
+
+			}
 
 		);
+
 	}
 
 	vickieGo(); //calling the vickieGo function
+
 
 	//creating functionality for spawning and animating images along the length of the screen
 	function spawnAvocado() {
 		TweenMax.fromTo(avocado, 10, //animating the avocado for 8 seconds			
 			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},}) //stop point for the animation 550px from the top of container		
-	// 		onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
-	// 		{avocado.remove()}, //removing the avocado after animation to avoid storage issues 
-	// 		onUpdate:update }); 
-	// 		function complete() {	
-	// 		}
-	// 		function update() {
+			{css: {top: '800px'},
+			onUpdate:update}) 
+			function update() {
+				checkCollision(vickie, avocado);
 
             
 	}
+}
 
 	
 		function spawnBroccoli () {
 		TweenMax.fromTo(broccoli, 7, //animating the brocolli for 10 seconds			
-			{css: {left: '400px', top: '-100px'}}, //starting animation at 400px from the left and -10px from the top of container		
-			{css: {left: '400px', top: '800px'}, //stop point for the animation  400px from left and 550px from the top of container		
+			{css: {top: '-100px'}}, //starting animation at 400px from the left and -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation  400px from left and 550px from the top of container		
+			onUpdate:update})
 			// onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			// { broccoli.remove() }, //removing the broccoli after animation to avoid storage issues
 			// onUpdate:update }); 
 			// function complete() {	
 			// }
-			// function update() {
-            })
+			function update() {
+				checkCollision(vickie, broccoli);
+            
 	}
+}
 
 
 		function spawnCarrot () {
 		TweenMax.fromTo(carrot, 8, //animating the carrot for 4 seconds			
-			{css: {left: '800px', top: '-100px'}}, //starting animation at 800px from the left and -10px from the top of container		
-			{css: {left: '800px', top: '800px'}, //stop point for the animation 800px from left and 550px from the top of container		
+			{css: {top: '-100px'}}, //starting animation at 800px from the left and -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation 800px from left and 550px from the top of container		
 			// onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			// { carrot.remove() }, //removing the carrot after animation to avoid storage issues
 			// onUpdate:update}); 
@@ -182,8 +186,8 @@ $(document).ready(function() {
 
 		function spawnMeat () {
 		TweenMax.fromTo(meat, 7, //animating the meat for 5 seconds			
-			{css: {left: '100px', top: '-100px'}}, //starting animation at 100px from the left and -10px from the top of container		
-			{css: {left: '100px', top: '800px'}, //stop point for the animation  100px from left and 550px from the top of container		
+			{css: {top: '-100px'}}, //starting animation at 100px from the left and -10px from the top of container		
+			{css: {top: '800px'}, //stop point for the animation  100px from left and 550px from the top of container		
 			// onComplete:function() //Tween Max onComplete functiion stating that the animation is over 
 			// { meat.remove() }, //removing the meat after animation to avoid storage issues
 			// onUpdate:update }); 
@@ -225,7 +229,7 @@ $(document).ready(function() {
             default: 
                 break;
         }
-    }, 2000) //interval timing
+    }, 3000) //interval timing
 
     function getRandom() { //get a random number to cycle through the arrows to randomize the drop.
         let number = (Math.floor(Math.random() * 6) + 1);
@@ -233,25 +237,18 @@ $(document).ready(function() {
     }
     
             
-// check for collision   
+    //check collisions
+    function checkCollision(element1, element2) {
+    	if (element1[0].x < element2[0].x + element2[0].width &&
+    	element1[0].y < element2[0].y + element2[0].height && 
+    	element1[0].height + element1[0].y > element2[0].y) {
+    		console.log('collision!');
+    	}
+    }
 
- function collision(avocado, vickie) {
-        var x1 = avocado.offset().left;
-        var y1 = avocado.offset().top;
-        var h1 = avocado.outerHeight(true);
-        var w1 = avocado.outerWidth(true);
-        var b1 = y1 + h1;
-        var r1 = x1 + w1;
-        var x2 = vickie.offset().left;
-        var y2 = vickie.offset().top;
-        var h2 = vickie.outerHeight(true);
-        var w2 = vickie.outerWidth(true);
-        var b2 = y2 + h2;
-        var r2 = x2 + w2;
 
-        if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
-        return true;
-      }
+
+    
 
 
 
