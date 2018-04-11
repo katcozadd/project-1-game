@@ -22,13 +22,13 @@ As I finished looking things look pretty, I started to realize how difficult som
 
 For this project, the follow was required:
 
--Render a game in the browser
--Design logic for winning & visually display which player won, or if it is one player, have a win state with feedback for the player
--Include separate HTML / CSS / JavaScript files
--Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
--Use Javascript or jQuery for DOM manipulation
--Deploy your game online, where the rest of the world can access it
--Use semantic markup for HTML (adhere to best practices)
+- Render a game in the browser
+- Design logic for winning & visually display which player won, or if it is one player, have a win state with feedback for the player
+- Include separate HTML / CSS / JavaScript files
+- Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
+- Use Javascript or jQuery for DOM manipulation
+- Deploy your game online, where the rest of the world can access it
+- Use semantic markup for HTML (adhere to best practices)
 
 ### Technologies Used
 
@@ -67,8 +67,8 @@ The biggest and most challenging obstacle I faced (and tackled!!!) was collision
 ### Project Continuation
 
 Before I submit this project into my portfolio work, I intended on:
--creating a scoreboard that adds points every time a vegetable is "caught"
--creating custom alert messages to let user know that they have either won the game or lost
+- Creating a scoreboard that adds points every time a vegetable is "caught"
+- Creating custom alert messages to let user know that they have either won the game or lost
 
 ### Deployment
 
