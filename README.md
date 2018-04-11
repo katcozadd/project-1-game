@@ -1,6 +1,6 @@
 # Project One - Vegan Vickie
 
-##Big Picture:
+## Big Picture:
 
 Vickie is a vegan girl who has been put into her worst nightmare... stuck in the middle of a sunflower field in the midst of a meat storm. Meats and vegetables are falling from the sky and it is up to the game player to help Vickie get out of the sunflower field safely. Try to collect vegetables and try not to get hit by meat while crossing the field.
 
