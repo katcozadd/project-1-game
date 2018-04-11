@@ -29,141 +29,128 @@ $(document).ready(function() {
              vickieStart += -50; 	
 			}
 
-		if (vickieStart >= 1200) {
+		if (vickieStart >= 1200) { //when vickie gets to 1200px the game is over
         		alert('Guuuuuurl! You are a wiener... I mean winner!');
         	}
-			console.log(vickieStart);
+			// console.log(vickieStart);
 		});
 
 	}
 
 	vickieGo(); //calling the vickieGo function
 
-
 	//creating functionality for spawning and animating images along the length of the screen
 	function spawnAvocado() {
-		TweenMax.fromTo(avocado, 10, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(avocado, 10, //animating the avocado for 10 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				checkCollision(vickie, avocado);
+			function update() {//updating and respawning function
+				checkCollision(vickie, avocado);//invoking checkCollision function everytime the animation updates
 			}
 }
 
-	
 		function spawnBroccoli () {
-		TweenMax.fromTo(broccoli, 7, //animating the brocolli for 10 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(broccoli, 7, //animating the brocolli for 7 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				checkCollision(vickie, broccoli);
+			function update() {//updating and respawning function
+				checkCollision(vickie, broccoli);//invoking checkCollision function everytime the animation updates
 
             
 	}
 }
-
 
 		function spawnCarrot () {
-		TweenMax.fromTo(carrot, 8, //animating the carrot for 4 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(carrot, 8, //animating the carrot for 8 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				checkCollision(vickie, carrot);
+			function update() { //updating and respawning function
+				checkCollision(vickie, carrot); //invoking checkCollision function everytime the animation updates
 
-            
 	}
 }
-
 
 		function spawnAsparagus() {
-		TweenMax.fromTo(asparagus, 10, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(asparagus, 10, //animating the avocado for 10 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				checkCollision(vickie, asparagus);
+			function update() {//updating and respawning function
+				checkCollision(vickie, asparagus);//invoking checkCollision function everytime the animation updates
 
             
 	}
 }
 
-
 		function spawnPepper() {
-		TweenMax.fromTo(pepper, 7, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(pepper, 7, //animating the avocado for 7 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				checkCollision(vickie, pepper);
-
+			function update() {//updating and respawning function
+				checkCollision(vickie, pepper);//invoking checkCollision function everytime the animation updates
             
 	}
 }
 		function spawnEggplant() {
-		TweenMax.fromTo(eggplant, 5, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(eggplant, 5, //animating the avocado for 5 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				checkCollision(vickie, eggplant);
+			function update() {//updating and respawning function
+				checkCollision(vickie, eggplant);//invoking checkCollision function everytime the animation updates
 
-            
 	}
 }
 
 		function spawnChicken() {
-		TweenMax.fromTo(chicken, 5, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(chicken, 5, //animating the avocado for 5 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				meatCollision(vickie, chicken);
-
+			function update() {//updating and respawning function
+				meatCollision(vickie, chicken);//invoking checkCollision function everytime the animation updates
             
 	}
 }
 
 		function spawnGroundMeat() {
-		TweenMax.fromTo(groundmeat, 4, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(groundmeat, 4, //animating the avocado for 4 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				meatCollision(vickie, groundmeat);
-
+			function update() {//updating and respawning function
+				meatCollision(vickie, groundmeat);//invoking checkCollision function everytime the animation updates
             
 	}
 }
 
 		function spawnPork() {
-		TweenMax.fromTo(pork, 6, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(pork, 6, //animating the avocado for 6 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				meatCollision(vickie, pork);
-
+			function update() {//updating and respawning function
+				meatCollision(vickie, pork);//invoking checkCollision function everytime the animation updates
             
 	}
 }
 
 		function spawnMeat () {
-		TweenMax.fromTo(meat, 4, //animating the meat for 5 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
+		TweenMax.fromTo(meat, 4, //animating the meat for 4 seconds			
+			{css: {top: '-100px'}}, //starting animation at -100px from the top of container		
+			{css: {top: '800px'}, //stop animation at 800px 
 			onUpdate:update}) 
-			function update() {
-				meatCollision(vickie, meat);
-
+			function update() {//updating and respawning function
+				meatCollision(vickie, meat);//invoking checkCollision function everytime the animation updates
             
 	}
 }
-
 	//creating functionality that will trigger animation of images based off of a random number between 1-6
-	//setting an interval of 1 millisecond between each random number
+	//setting an interval of 2 milliseconds between each random number
     const dropFood = setInterval(function(){
         let random = getRandom();
         switch(random) { 
@@ -214,41 +201,27 @@ $(document).ready(function() {
         return number;
     }
     
-       
+     // let score = 0; //going to add in a score
     //check collisions
-    function checkCollision(element1, element2) {
-    	if (element1[0].x < element2[0].x + element2[0].width &&
+    function checkCollision(element1, element2) { //function that checks the height, width, x and y coordinates to detect whether two elements have collided at anypoint
+    	if (element1[0].x < element2[0].x + element2[0].width &&// this function is being called in each spawn vegetable function
     		element1[0].x + element1[0].width > element2[0].x &&
     	element1[0].y < element2[0].y + element2[0].height && 
     	element1[0].height + element1[0].y > element2[0].y) {
-    		// console.log('collisions');
-    		element2.remove();
-
+    		// score = score + 1;
+    		// $('#currentScore').append("<p>" + score + "</p>"); //going to add in a score
+    		element2.remove(); //remove the vegetable once it and vickie collide
     	}
     }
 
-    function meatCollision(element1, element2) {
-    	if (element1[0].x < element2[0].x + element2[0].width &&
+    function meatCollision(element1, element2) { //function that checks the height, width, x and y coordinates to detect whether two elements have collided at anypoint
+    	if (element1[0].x < element2[0].x + element2[0].width &&// this function is being called in each spawn meat function
     		element1[0].x + element1[0].width > element2[0].x &&
     	element1[0].y < element2[0].y + element2[0].height && 
     	element1[0].height + element1[0].y > element2[0].y) {
-    		alert('Guuuuuurl... you got meated on. Game over.');
-
+    		alert('Guuuuuurl... you got meated on. Game over.'); //ends game if meat is hit
     	}
 
 	}
 
-
-	let score = 0;
-	function displayScore() {
-		console.log("displaying!");
-		console.log(score);
-		scoreBoard = $('#scoreBoard');
-		if (checkCollision() === true) {
-			score += 1;
-		}
-
-	}
-displayScore();
 });
-
