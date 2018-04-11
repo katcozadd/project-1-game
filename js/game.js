@@ -15,26 +15,27 @@ $(document).ready(function() {
 	let meat = $('#meat'); //creating a meat variable for the meat image
 	let vickie = $('#vickie');
 
-
+	let vickieStart = 0; //creating a start point for vickie to start moving
 	//creating functionality for character movement
 	function vickieGo () {
 	$(document).keydown(function(event) {
 			// console.log($('#vickie').position());
-	let vickieStart = 900; //creating a start point for vickie to start moving
-        if(event.keyCode == "37") //Moving with the right arrow key
+        if(event.keyCode == "37") {//Moving with the right arrow key
             $("#vickie").stop(true).animate({"left" : "-=50px"}, "fast"); //moving vickie right 50px
-        	if (vickieStart === 50) {
-        		alert('Guuuuuurl! You are a wiener... I mean winner!');
-        	}
-         if(event.keyCode == "39")   //moving with the left arrow key   
-             $("#vickie").stop(true).animate({"left" : "+=30px"}, "fast"); //moving vickie left 50px		}
+        	vickieStart += 50; 
+        }
+         if(event.keyCode == "39") {   //moving with the left arrow key   
+             $("#vickie").stop(true).animate({"left" : "+=50px"}, "fast"); //moving vickie left 50px	
+             vickieStart += -50; 	
 			}
 
-		);
+		if (vickieStart >= 1200) {
+        		alert('Guuuuuurl! You are a wiener... I mean winner!');
+        	}
+			console.log(vickieStart);
+		});
 
 	}
-
-	console.log(vickie[0].x);
 
 	vickieGo(); //calling the vickieGo function
 
@@ -108,18 +109,6 @@ $(document).ready(function() {
 			onUpdate:update}) 
 			function update() {
 				checkCollision(vickie, eggplant);
-
-            
-	}
-}
-
-		function spawnSquash() {
-		TweenMax.fromTo(squash, 8, //animating the avocado for 8 seconds			
-			{css: {top: '-100px'}}, //starting animation at -10px from the top of container		
-			{css: {top: '800px'},
-			onUpdate:update}) 
-			function update() {
-				checkCollision(vickie, squash);
 
             
 	}
@@ -229,30 +218,37 @@ $(document).ready(function() {
     //check collisions
     function checkCollision(element1, element2) {
     	if (element1[0].x < element2[0].x + element2[0].width &&
+    		element1[0].x + element1[0].width > element2[0].x &&
     	element1[0].y < element2[0].y + element2[0].height && 
     	element1[0].height + element1[0].y > element2[0].y) {
-    		// score += 1;
-    		// $('#gamePoints').append(score);
     		// console.log('collisions');
     		element2.remove();
 
     	}
     }
 
-        function meatCollision(element1, element2) {
-    	if (element1[0].x === element2.x &&
-    	element1[0].y === element2[0].y) {
-    		// score += 1;
-    		// $('#gamePoints').append(score);
-    		alert('Game over guuuuurl...')
+    function meatCollision(element1, element2) {
+    	if (element1[0].x < element2[0].x + element2[0].width &&
+    		element1[0].x + element1[0].width > element2[0].x &&
+    	element1[0].y < element2[0].y + element2[0].height && 
+    	element1[0].height + element1[0].y > element2[0].y) {
+    		alert('Guuuuuurl... you got meated on. Game over.');
+
     	}
-    }
+
+	}
 
 
+	let score = 0;
+	function displayScore() {
+		console.log("displaying!");
+		console.log(score);
+		scoreBoard = $('#scoreBoard');
+		if (checkCollision() === true) {
+			score += 1;
+		}
 
-    
-
-
-
+	}
+displayScore();
 });
 
