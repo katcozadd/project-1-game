@@ -16,7 +16,7 @@ I did go back throughout the project and update some of the checklists and user 
 
 Soooo I decided to start this project by doing all of the users stories that I foresaw having the lowest velocity, which was a fantastic start that gave me a lot of optimism. 
 
-As I finished looking things look pretty, I started to realize how difficult some of the game logic was going to be for me... Logic took me four of the six days that we had to complete this project.
+As I finished making things look pretty, I started to realize how difficult some of the game logic was going to be for me... Logic took me four of the six days that we had to complete this project.
 
 ### Technical Requirements
 
