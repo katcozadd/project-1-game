@@ -8,7 +8,7 @@ Vickie is a vegan girl who has been put into her worst nightmare... stuck in the
 
 https://trello.com/b/wd5Y3YRI/ga-project-1-game-vegan-vickie
 
-I definitely under-estimated the difficulty teaching myself some of the algorithims that I used in this project while in the planning portion. I used a website called Trello to great user stories, checklists and estimate velocity of each task.
+I definitely under-estimated the difficulty teaching myself some of the algorithims that I used in this project while in the planning portion. I used a website called Trello to create user stories, checklists and estimate velocity of each task.
 
 I did go back throughout the project and update some of the checklists and user stories to match a more realistic approach to this game, but not thoroughly.
 
